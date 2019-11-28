@@ -43,6 +43,9 @@ public class Archivos {
             resultado=false;
         }
          //2-Guardar el JT como va
+         
+         
+         
         //3.-Vacio la matriz que copie
         try{
             sw=new FileWriter(ruta_nombre, true);
@@ -57,3 +60,4 @@ public class Archivos {
 }
 }
 //hola
+//azul
