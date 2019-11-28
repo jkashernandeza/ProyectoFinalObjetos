@@ -59,6 +59,4 @@ public class Archivos {
         return resultado;
 }
 }
-//hola
 
-//verde
