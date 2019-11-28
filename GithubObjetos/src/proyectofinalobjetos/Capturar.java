@@ -1,3 +1,6 @@
+
+import javax.swing.table.DefaultTableModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,8 +16,12 @@ public class Capturar extends javax.swing.JFrame {
     /**
      * Creates new form Capturar
      */
+    int x;
+    DefaultTableModel modelo;
     public Capturar() {
         initComponents();
+        modelo=new DefaultTableModel();
+        modelo=(DefaultTableModel) jTable1.getModel();
     }
 
     /**
@@ -51,15 +58,7 @@ public class Capturar extends javax.swing.JFrame {
             new String [] {
                 "X", "Y"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Double.class, java.lang.Double.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(jTable1);
 
         jTextField1.setText(" ");
@@ -169,7 +168,12 @@ public class Capturar extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        //Inserta las cajas de texto al jTable. No debe duplicarse y
+        Object renglon[] = new Object[2];
+        renglon[0]=jTextField2.getText();
+        renglon[1]=jTextField3.getText();
+        modelo.addRow(renglon);
+        jTextField1.setText("");
+        jTextField3.setText("");
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
