@@ -172,7 +172,7 @@ public class Capturar extends javax.swing.JFrame {
         renglon[0]=jTextField2.getText();
         renglon[1]=jTextField3.getText();
         modelo.addRow(renglon);
-        jTextField1.setText("");
+        jTextField2.setText("");
         jTextField3.setText("");
         
     }//GEN-LAST:event_jButton2ActionPerformed
